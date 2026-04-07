@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://www.alexsouzacabral.com/ -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willyan Souza Brito – Assessoria e Consultoria Jurídica</title>
+
+    <!-- Tailwind CSS via CDN para estilização rápida e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter para o corpo e uma fonte Serif para elegância -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Configuração customizada do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#EAB308', // Amarelo Dourado
+                            bg: '#000000',   // Fundo Preto
+                            'bg-alt': '#191919', // Fundo Alternativo (Cinza quase preto)
+                            green: '#22C55E' // Verde para resultados positivos
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos customizados e animações */
+
+        body {
+            background-color: #0f0f0f;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Animação de Fade In/Out em Loop para o botão principal */
+        @keyframes fadePulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .animate-fade-pulse {
+            animation: fadePulse 2s ease-in-out infinite;
+        }
+
+        /* Estilo para os itens de card no grid */
+        .card-grid-item {
+            background: rgb(234 179 8 / 20%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-grid-item:hover {
+            border-color: rgba(234, 179, 8, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Esconder barra de rolagem mas manter funcionalidade */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Seleção de texto customizada */
+        ::selection {
+            background: rgba(234, 179, 8, 0.3);
+            color: white;
+        }
+
+        /* card 780 */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .score-number {
+            opacity: 0;
+        }
+
+        .score-number.animated {
+            animation: countUp 0.8s ease-out forwards;
+        }
+
+        /* ===== ANIMAÇÕES DE SCROLL ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Classes para aplicar as animações */
+        .animate-on-scroll {
+            opacity: 0;
+        }
+
+        .animate-on-scroll.visible-fade-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.visible-fade-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.visible-fade-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.visible-scale {
+            animation: scaleIn 0.8s ease-out forwards;
+        }
+
+        /* Efeito de stagger para múltiplos elementos */
+        .animate-on-scroll.stagger-1 {
+            animation-delay: 0.1s;
+        }
+
+        .animate-on-scroll.stagger-2 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-on-scroll.stagger-3 {
+            animation-delay: 0.3s;
+        }
+
+        .animate-on-scroll.stagger-4 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-on-scroll.stagger-5 {
+            animation-delay: 0.5s;
+        }
+
+        .animate-on-scroll.stagger-6 {
+            animation-delay: 0.6s;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-8{bottom:2rem}.left-0{left:0px}.left-1\/2{left:50%}.right-0{right:0px}.right-6{right:1.5rem}.right-8{right:2rem}.right-full{right:100%}.top-0{top:0px}.top-1\/2{top:50%}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.z-\[100\]{z-index:100}.z-\[60\]{z-index:60}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-16{margin-bottom:4rem}.mb-20{margin-bottom:5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-4{margin-right:1rem}.mt-2{margin-top:0.5rem}.mt-20{margin-top:5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[3\/1\]{aspect-ratio:3/1}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[600px\]{height:600px}.h-auto{height:auto}.h-full{height:100%}.max-h-\[80vh\]{max-height:80vh}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-\[600px\]{width:600px}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-\[180px\]{max-width:180px}.max-w-\[400px\]{max-width:400px}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:0.125rem}.gap-1{gap:0.25rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-8{column-gap:2rem}.gap-y-4{row-gap:1rem}.space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-brand-gold\/10{border-color:rgb(234 179 8 / 0.1)}.border-brand-gold\/20{border-color:rgb(234 179 8 / 0.2)}.border-brand-green\/20{border-color:rgb(34 197 94 / 0.2)}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.border-white\/70{border-color:rgb(255 255 255 / 0.7)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-brand-bg{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-brand-bg-alt{--tw-bg-opacity:1;background-color:rgb(25 25 25 / var(--tw-bg-opacity, 1))}.bg-brand-gold{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-brand-gold\/10{background-color:rgb(234 179 8 / 0.1)}.bg-brand-gold\/5{background-color:rgb(234 179 8 / 0.05)}.bg-brand-green\/10{background-color:rgb(34 197 94 / 0.1)}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.fill-current{fill:currentColor}.fill-none{fill:none}.stroke-current{stroke:currentColor}.stroke-\[1\.5\]{stroke-width:1.5}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-1{padding:0.25rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-0{padding-bottom:0px}.pb-20{padding-bottom:5rem}.pb-32{padding-bottom:8rem}.pb-8{padding-bottom:2rem}.pt-10{padding-top:2.5rem}.pt-20{padding-top:5rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.align-bottom{vertical-align:bottom}.font-serif{font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-7xl{font-size:4.5rem;line-height:1}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-widest{letter-spacing:0.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-brand-gold{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.text-brand-gold\/70{color:rgb(234 179 8 / 0.7)}.text-brand-gold\/80{color:rgb(234 179 8 / 0.8)}.text-brand-gold\/90{color:rgb(234 179 8 / 0.9)}.text-brand-green{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/10{color:rgb(255 255 255 / 0.1)}.text-white\/40{color:rgb(255 255 255 / 0.4)}.text-white\/50{color:rgb(255 255 255 / 0.5)}.text-white\/60{color:rgb(255 255 255 / 0.6)}.text-white\/70{color:rgb(255 255 255 / 0.7)}.text-white\/80{color:rgb(255 255 255 / 0.8)}.text-white\/90{color:rgb(255 255 255 / 0.9)}.opacity-0{opacity:0}.opacity-60{opacity:0.6}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_-5px_30px_rgba\(234\2c 179\2c 8\2c 0\.3\)\]{--tw-shadow:0 -5px 30px rgba(234,179,8,0.3);--tw-shadow-colored:0 -5px 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_50px_rgba\(234\2c 179\2c 8\2c 0\.1\)\]{--tw-shadow:0 0 50px rgba(234,179,8,0.1);--tw-shadow-colored:0 0 50px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_10px_30px_rgba\(234\2c 179\2c 8\2c 0\.3\)\]{--tw-shadow:0 10px 30px rgba(234,179,8,0.3);--tw-shadow-colored:0 10px 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_10px_40px_rgba\(234\2c 179\2c 8\2c 0\.3\)\]{--tw-shadow:0 10px 40px rgba(234,179,8,0.3);--tw-shadow-colored:0 10px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-brand-gold\/30 *::selection{background-color:rgb(234 179 8 / 0.3)}.selection\:bg-brand-gold\/30::selection{background-color:rgb(234 179 8 / 0.3)}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.05\]:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-brand-gold:hover{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.hover\:border-brand-gold\/20:hover{border-color:rgb(234 179 8 / 0.2)}.hover\:border-brand-gold\/30:hover{border-color:rgb(234 179 8 / 0.3)}.hover\:bg-brand-gold\/90:hover{background-color:rgb(234 179 8 / 0.9)}.hover\:text-brand-gold:hover{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-brand-gold\/10{background-color:rgb(234 179 8 / 0.1)}.group:hover .group-hover\:bg-brand-gold\/20{background-color:rgb(234 179 8 / 0.2)}.group:hover .group-hover\:text-brand-gold{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-brand-gold\/20{color:rgb(234 179 8 / 0.2)}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:gap-7{gap:1.75rem}.md\:px-20{padding-left:5rem;padding-right:5rem}.md\:pb-0{padding-bottom:0px}.md\:pb-10{padding-bottom:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 1024px){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:contents{display:contents}.lg\:hidden{display:none}.lg\:w-48{width:12rem}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:grid-cols-\[1\.2fr_0\.8fr\]{grid-template-columns:1.2fr 0.8fr}.lg\:grid-cols-\[1\.5fr_1fr_1fr\]{grid-template-columns:1.5fr 1fr 1fr}.lg\:justify-end{justify-content:flex-end}.lg\:gap-24{gap:6rem}.lg\:px-20{padding-left:5rem;padding-right:5rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:pb-0{padding-bottom:0px}.lg\:pt-10{padding-top:2.5rem}.lg\:pt-32{padding-top:8rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1280px){.xl\:px-32{padding-left:8rem;padding-right:8rem}}</style></head>
+
+<body class="min-h-screen selection:bg-brand-gold/30 pb-20 md:pb-0">
+
+    <!-- MENU SUPERIOR (NAVBAR) -->
+    <nav class="bg-black/50 backdrop-blur-md border-b border-white/5 py-4 top-0 z-[100] hidden lg:block">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32 flex items-center">
+            <!-- Logo do site -->
+            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/LOGO-AC-8.png" alt="Logo" class="h-20 w-auto object-contain animate-on-scroll visible-fade-up" data-animation="fade-up">
+        </div>
+    </nav>
+
+    <!-- SEÇÃO HOME (MAIN HERO) -->
+    <section class="relative bg-black overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/bg.png" alt="Background" class="w-full h-full object-cover opacity-60">
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 items-end">
+
+                <div class="pt-10 pb-0 lg:py-24">
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-3xl md:text-5xl font-semibold leading-tight animate-on-scroll visible-fade-left" data-animation="fade-left">
+                                <span class="text-white">Limpeza de Nome Completa</span>
+                                <span class="text-brand-gold"> e Liberação de Crédito</span>
+                            </h1>
+                            <p class="text-white/70 text-base lg:text-lg max-w-xl leading-relaxed animate-on-scroll stagger-1 visible-fade-left" data-animation="fade-left">
+                                Regularizamos seu nome no SPC, Serasa, Boa Vista e Cartórios com estratégia profissional
+                                para você voltar a ter crédito aprovado.
+                            </p>
+                        </div>
+
+                        <div class="flex items-end gap-2 lg:block">
+                            <ul class="space-y-3 pb-8 lg:pb-0 flex-1">
+                                <li class="flex items-center gap-2 animate-on-scroll stagger-1 visible-fade-left" data-animation="fade-left">
+                                    <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                                    </div>
+                                    <span class="text-sm md:text-lg font-bold text-white/90 uppercase tracking-wide">Aumento
+                                        do Score</span>
+                                </li>
+                                <li class="flex items-center gap-2 animate-on-scroll stagger-2 visible-fade-left" data-animation="fade-left">
+                                    <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                                    </div>
+                                    <span class="text-sm md:text-lg font-bold text-white/90 uppercase tracking-wide">Limpa
+                                        Bacen</span>
+                                </li>
+                                <li class="flex items-center gap-2 animate-on-scroll stagger-3 visible-fade-left" data-animation="fade-left">
+                                    <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                                    </div>
+                                    <span class="text-sm md:text-lg font-bold text-white/90 uppercase tracking-wide">Rating
+                                        Comercial</span>
+                                </li>
+                                <li class="flex items-center gap-2 animate-on-scroll stagger-4 visible-fade-left" data-animation="fade-left">
+                                    <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                                    </div>
+                                    <span class="text-sm md:text-lg font-bold text-white/90 uppercase tracking-wide">Crédito
+                                        Liberado</span>
+                                </li>
+                            </ul>
+
+                            <div class="lg:hidden flex-1 max-w-[180px]">
+                                <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" alt="Especialista" class="w-full h-auto object-contain block align-bottom animate-on-scroll visible-fade-right" data-animation="fade-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex justify-end items-end">
+                    <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" alt="Especialista Willyan Souza Brito" class="max-h-[80vh] w-auto object-contain block animate-on-scroll visible-fade-right" data-animation="fade-right">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PRINCIPAL DE CONTEÚDO -->
+    <div id="inicio" class="container mx-auto px-6 lg:px-20 xl:px-32 pt-20 lg:pt-32">
+        <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-start">
+
+            <!-- Coluna da Esquerda: Textos e Detalhes -->
+            <div class="space-y-10">
+                <div class="space-y-4">
+                    <h2 class="text-5xl font-extrabold leading-[1.1] tracking-tight animate-on-scroll visible-fade-up" data-animation="fade-up">
+                        <span class="text-brand-gold">Seu Nome Está Negativado?</span><br>
+                        Volte a Ter Crédito Ainda Esse Mês.
+                    </h2>
+                    <p class="text-white/60 text-lg lg:text-xl max-w-2xl leading-relaxed animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                        Regularizamos seu nome no SPC, Serasa, Boa Vista e Bacen com estratégia jurídica segura e
+                        acompanhamento completo.
+                    </p>
+                </div>
+
+                <!-- Lista de Benefícios -->
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    <div class="flex items-center gap-2 animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock text-brand-gold w-5 h-5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <span class="text-base font-bold">Atendimento imediato</span>
+                    </div>
+                    <div class="flex items-center gap-2 animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap text-brand-gold w-5 h-5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                        <span class="text-base font-bold">Análise rápida do seu CPF</span>
+                    </div>
+                    <div class="flex items-center gap-2 animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" aria-hidden="true" class="lucide lucide-bar-chart-3 text-brand-gold w-5 h-5"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                        <span class="text-base font-bold">Aumento de score real</span>
+                    </div>
+                </div>
+
+                <!-- Grid de 4 Cards de Serviços -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+                    <div class="card-grid-item animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                            <span class="font-bold text-lg">Limpeza de Nome Completa</span>
+                        </div>
+                    </div>
+                    <div class="card-grid-item animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" aria-hidden="true" class="lucide lucide-trending-up text-brand-gold w-5 h-5"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+                            <span class="font-bold text-lg">Aumento de Score Rápido</span>
+                        </div>
+                    </div>
+                    <div class="card-grid-item animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield text-brand-gold w-5 h-5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                            <span class="font-bold text-lg">Remoção de Restrições no Bacen</span>
+                        </div>
+                    </div>
+                    <div class="card-grid-item animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" aria-hidden="true" class="lucide lucide-credit-card text-brand-gold w-5 h-5"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                            <span class="font-bold text-lg">Liberação de Crédito e Cartões</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-white/40 text-sm italic max-w-md animate-on-scroll visible-fade-up" data-animation="fade-up">
+                    Você pode estar sendo negado em crédito, financiamento ou cartão sem saber que isso tem solução.
+                </p>
+
+                <!-- BOTÃO COM ANIMAÇÃO DE FADE PULSE -->
+                <div class="flex flex-col sm:flex-row items-center gap-8 pt-4 animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." class="animate-fade-pulse bg-brand-gold hover:bg-brand-gold/90 text-black px-8 py-5 rounded-xl font-black text-lg flex items-center gap-3 transition-transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(234,179,8,0.3)] w-full sm:w-auto text-center justify-center uppercase">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-6 h-6"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                        Limpar Meu Nome (Análise Grátis)
+                    </a>
+                    <a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." class="flex items-center gap-2 text-white/80 hover:text-white font-bold transition-colors group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-5 h-5 text-brand-gold group-hover:scale-110 transition-transform"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                        Falar com especialista
+                    </a>
+                </div>
+
+                <!-- Indicadores de Confiança -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-2 text-white/60 text-xs font-bold animate-on-scroll visible-fade-up" data-animation="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock w-4 h-4"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <span>Atendimento sigiloso e 100% seguro.</span>
+                    </div>
+                    <div class="flex items-center gap-3 animate-on-scroll visible-fade-up" data-animation="fade-up">
+                        <div class="flex gap-0.5 text-brand-gold">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <span class="text-white/60 text-xs font-medium">
+                            Centenas de clientes atendidos · Resultados comprovados
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita: Card de Simulação -->
+            <div class="flex justify-center lg:justify-end lg:pt-10">
+                <div class="bg-white/5 border border-brand-gold/20 rounded-2xl p-8 shadow-[0_0_50px_rgba(234,179,8,0.1)] max-w-[400px] w-full animate-on-scroll visible-scale" data-animation="scale">
+                    <div class="text-center mb-8">
+                        <h3 class="text-brand-gold font-bold text-sm tracking-widest uppercase mb-1">Simulação de
+                            Resultado</h3>
+                        <p class="text-white/40 text-xs">Baseado em casos reais</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span id="scoreNumber" class="text-brand-green text-7xl font-extrabold tracking-tighter score-number animated" style="color: rgb(34, 255, 94);">780</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="h-3 bg-white/5 rounded-full overflow-hidden relative border border-white/10">
+                            <div class="progress-bar h-full rounded-full transition-all" style="width: 85%; background-color: rgb(34, 255, 94); box-shadow: rgb(34, 255, 94) 0px 0px 15px; transition: none;"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] font-bold text-white/40">
+                            <span>300</span>
+                            <span>850</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-brand-green/10 border border-brand-green/20 px-6 py-2 rounded-full flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" aria-hidden="true" class="lucide lucide-trending-up text-brand-green w-4 h-4"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+                            <span id="pointsNumber" class="text-brand-green font-bold text-sm">+360 pontos</span>
+                        </div>
+                    </div>
+                    <div class="text-center space-y-4">
+                        <p class="text-white/80 text-xs leading-relaxed">
+                            Clientes recuperam em média <span class="font-bold text-white">+300 pontos</span>
+                        </p>
+                        <div class="flex items-center justify-center gap-2 text-brand-green font-bold text-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                            <span>Resultado real possível*</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO: COMO FUNCIONA -->
+    <section class="py-24 bg-brand-bg-alt relative mt-20">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32">
+            <div class="text-center mb-20">
+                <div class="w-16 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up"></div>
+                <h2 class="text-4xl lg:text-6xl font-extrabold mb-4 animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">Como <span class="text-brand-gold">Funciona?</span></h2>
+                <p class="text-white/40 text-lg animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">Nosso processo é
+                    simples, rápido e eficaz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Passo 01 -->
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-brand-gold/30 transition-all animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <span class="absolute top-4 right-6 text-6xl font-black text-white/10 select-none group-hover:text-brand-gold/20 transition-colors">01</span>
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-8 border border-brand-gold/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" aria-hidden="true" class="lucide lucide-bar-chart-3 w-6 h-6"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 leading-tight group-hover:text-brand-gold transition-colors">
+                        Análise completa do seu CPF</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Verificamos todas as restrições em seu nome.</p>
+                </div>
+                <!-- Passo 02 -->
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-brand-gold/30 transition-all animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                    <span class="absolute top-4 right-6 text-6xl font-black text-white/10 select-none group-hover:text-brand-gold/20 transition-colors">02</span>
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-8 border border-brand-gold/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" aria-hidden="true" class="lucide lucide-credit-card w-6 h-6"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 leading-tight group-hover:text-brand-gold transition-colors">
+                        Identificação das restrições</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Mapeamos cada pendência e sua origem.</p>
+                </div>
+                <!-- Passo 03 -->
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-brand-gold/30 transition-all animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                    <span class="absolute top-4 right-6 text-6xl font-black text-white/10 select-none group-hover:text-brand-gold/20 transition-colors">03</span>
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-8 border border-brand-gold/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-6 h-6"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 leading-tight group-hover:text-brand-gold transition-colors">
+                        Estratégia jurídica personalizada</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Montamos um plano sob medida para seu caso.</p>
+                </div>
+                <!-- Passo 04 -->
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-brand-gold/30 transition-all animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                    <span class="absolute top-4 right-6 text-6xl font-black text-white/10 select-none group-hover:text-brand-gold/20 transition-colors">04</span>
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center text-brand-gold mb-8 border border-brand-gold/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" aria-hidden="true" class="lucide lucide-trending-up w-6 h-6"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold mb-3 leading-tight group-hover:text-brand-gold transition-colors">
+                        Limpeza e recuperação do crédito</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Executamos e acompanhamos até o resultado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: ATENDIMENTO ESPECIALIZADO -->
+    <section class="py-24 bg-brand-bg">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32">
+            <div class="text-center mb-16">
+                <div class="w-12 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up"></div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    Atendimento <span class="text-brand-gold">Especializado</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Atendimento
+                        direto com especialista</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" aria-hidden="true" class="lucide lucide-search w-5 h-5"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Análise
+                        individual do seu caso</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-5 h-5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Estratégia
+                        jurídica personalizada</h4>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-5 h-5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Processo rápido
+                        e transparente</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: SOBRE O ESCRITÓRIO -->
+
+    <!-- SEÇÃO: POR QUE NOS ESCOLHER -->
+    <section class="py-24 bg-brand-bg">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32 max-w-4xl">
+            <div class="text-center mb-16">
+                <div class="w-12 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up"></div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">Por
+                    Que <span class="text-brand-gold">Nos Escolher?</span></h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-5 h-5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">+10 anos de
+                        experiência</span>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Atendimento
+                        direto com especialista</span>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" aria-hidden="true" class="lucide lucide-trending-up w-5 h-5"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Alto índice
+                        de sucesso em recuperação de crédito</span>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-5 h-5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Estratégias
+                        personalizadas para cada cliente</span>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-6 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-5 visible-fade-up" data-animation="fade-up">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-brand-gold border border-white/10 group-hover:bg-brand-gold/10 transition-colors shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white/90 group-hover:text-white transition-colors">Foco total em
+                        resultado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: DEPOIMENTOS -->
+    <section class="py-24 bg-brand-bg-alt">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32">
+            <div class="text-center mb-16">
+                <div class="w-12 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up"></div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">O
+                    Que Nossos <span class="text-brand-gold">Clientes Dizem</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <div class="flex gap-1 text-brand-gold mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    </div>
+                    <p class="text-white/80 italic mb-8 leading-relaxed">"Consegui limpar meu nome e voltar a ter
+                        crédito em poucos dias. Recomendo demais!"</p>
+                    <div class="text-white/40 font-bold text-sm">— Maria S.</div>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                    <div class="flex gap-1 text-brand-gold mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    </div>
+                    <p class="text-white/80 italic mb-8 leading-relaxed">"Atendimento rápido e direto, resolveram meu
+                        problema sem enrolação."</p>
+                    <div class="text-white/40 font-bold text-sm">— Carlos R.</div>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 hover:border-brand-gold/20 transition-all group animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                    <div class="flex gap-1 text-brand-gold mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    </div>
+                    <p class="text-white/80 italic mb-8 leading-relaxed">"Meu score subiu muito depois do trabalho
+                        deles. Voltei a ter cartão de crédito!"</p>
+                    <div class="text-white/40 font-bold text-sm">— Ana P.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: OUTRAS ÁREAS -->
+    <section id="areas" class="py-24 bg-brand-bg border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32">
+            <div class="text-center mb-16">
+                <div class="w-12 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up"></div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    Também atuamos em <span class="text-brand-gold">outras áreas</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" aria-hidden="true" class="lucide lucide-credit-card w-5 h-5"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Direito do
+                        Consumidor</h4>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scale" aria-hidden="true" class="lucide lucide-scale w-5 h-5"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Direito
+                        Criminal</h4>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-handshake" aria-hidden="true" class="lucide lucide-heart-handshake w-5 h-5"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Direito de
+                        Família</h4>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-5 h-5"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Direito
+                        Previdenciário</h4>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-5 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gavel" aria-hidden="true" class="lucide lucide-gavel w-5 h-5"><path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381"></path><path d="m16 16 6-6"></path><path d="m21.5 10.5-8-8"></path><path d="m8 8 6-6"></path><path d="m8.5 7.5 8 8"></path></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Direito do
+                        Trabalho</h4>
+                </div>
+                <div class="bg-white/5 border border-white/5 rounded-xl p-5 flex items-center gap-5 hover:border-brand-gold/30 transition-all group cursor-default animate-on-scroll stagger-6 visible-fade-up" data-animation="fade-up">
+                    <div class="w-12 h-12 bg-brand-gold/5 rounded-xl flex items-center justify-center text-brand-gold border border-brand-gold/10 group-hover:bg-brand-gold/20 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="banknote" aria-hidden="true" class="lucide lucide-banknote w-5 h-5"><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+                    </div>
+                    <h4 class="text-base font-bold text-white/80 group-hover:text-white transition-colors">Cobranças
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CTA FINAL -->
+    <section id="contato" class="py-24 bg-brand-bg-alt border-t border-white/5 text-center relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none">
+        </div>
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32 relative z-10">
+            <div class="w-12 h-1 bg-brand-gold mx-auto mb-8 rounded-full animate-on-scroll visible-fade-up" data-animation="fade-up">
+            </div>
+            <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">Pare de ser negado. <br><span class="text-brand-gold">Volte a ter crédito
+                    aprovado.</span></h2>
+            <p class="text-white/60 text-lg lg:text-xl mb-10 max-w-2xl mx-auto leading-relaxed animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up">Fale agora com um especialista e descubra como limpar seu nome com segurança.
+            </p>
+            <div class="flex justify-center animate-on-scroll stagger-3 visible-fade-up" data-animation="fade-up">
+                <a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." target="_blank" class="bg-brand-gold hover:bg-brand-gold/90 text-black px-10 py-5 rounded-xl font-black text-lg flex items-center gap-3 transition-all hover:scale-[1.05] shadow-[0_10px_40px_rgba(234,179,8,0.3)] uppercase tracking-tight">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-6 h-6"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    Falar no WhatsApp Agora
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-2 text-white/40 text-sm mt-8 font-medium animate-on-scroll stagger-4 visible-fade-up" data-animation="fade-up">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock w-4 h-4"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Atendimento sigiloso e 100% seguro.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ (FOOTER) -->
+    <footer class="bg-brand-bg pt-20 pb-32 md:pb-10 border-t border-white/5">
+        <div class="container mx-auto px-4 md:px-20">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1fr] gap-12 lg:gap-24 mb-16">
+                <!-- Info e Logo -->
+                <div class="space-y-8">
+                    <div class="w-full lg:w-48">
+                        <div class="w-full aspect-[3/1] bg-brand-gold/5 border border-brand-gold/10 rounded-lg flex items-center justify-center text-brand-gold/80 font-serif italic text-xl animate-on-scroll visible-fade-up" data-animation="fade-up">
+                            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/LOGO-AC-8.png" alt="Logo" class="w-auto object-contain">
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm leading-relaxed max-w-sm animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up"><span class="font-bold text-white">Alex Souza Cabral OAB/AM 12096</span> atua com foco em <span class="text-brand-gold font-bold">recuperação de crédito</span> e soluções jurídicas estratégicas,
+                oferecendo segurança, agilidade e atendimento personalizado.</p>
+                    <!-- DEPOIS (com SVG nativo - funciona em HTML puro) -->
+                    <a href="https://www.instagram.com/dr.alexcabral" target="_blank" class="w-10 h-10 rounded-full border border-white/70 flex items-center justify-center text-white/70 hover:text-brand-gold hover:border-brand-gold transition-all group">
+                        <svg class="w-5 h-5 group-hover:scale-110 transition-transform fill-none stroke-current stroke-[1.5]" viewBox="0 0 24 24">
+                            <!-- Câmera/Quadrado arredondado do Instagram -->
+                            <rect x="2" y="2" width="20" height="20" rx="4.5" ry="4.5"></rect>
+                            <!-- Círculo do meio (lente) -->
+                            <circle cx="12" cy="12" r="3.5"></circle>
+                            <!-- Ponto de flash no canto superior direito -->
+                            <circle cx="17.5" cy="6.5" r="1.2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Links Úteis -->
+                <div class="grid grid-cols-2 gap-3 md:gap-7 lg:contents">
+                    <div class="space-y-6">
+                        <h3 class="text-white font-serif font-bold uppercase tracking-widest text-sm animate-on-scroll visible-fade-up" data-animation="fade-up">Links</h3>
+                        <ul class="space-y-4">
+                            <li><a href="https://www.alexsouzacabral.com/#inicio" class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scale" aria-hidden="true" class="lucide lucide-scale w-3 h-3 text-brand-gold/70"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg>Home</a></li>
+                            <li><a href="https://www.alexsouzacabral.com/#sobre" class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scale" aria-hidden="true" class="lucide lucide-scale w-3 h-3 text-brand-gold/70"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg>Sobre Nós</a></li>
+                            <li><a href="https://www.alexsouzacabral.com/#areas" class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scale" aria-hidden="true" class="lucide lucide-scale w-3 h-3 text-brand-gold/70"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg>Áreas de Atuação</a></li>
+                            
+                        </ul>
+                    </div>
+                    <!-- Contato Escritório -->
+                    <div class="space-y-6">
+                        <h3 class="text-white font-serif font-bold uppercase tracking-widest text-sm animate-on-scroll visible-fade-up" data-animation="fade-up">Escritório AM</h3>
+                        <ul class="space-y-4">
+                            <li><a href="https://wa.me/5592994458086?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-4 h-4 text-brand-gold/90"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>(92) 99445-8086</a></li>
+                            <li><a href="mailto:advcabral.asc@gmail.com" class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-4 h-4 text-brand-gold/90"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>advcabral.asc@gmail.com</a></li>
+                            <li>
+                                <div class="flex items-center gap-3 text-white/70 text-sm group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 text-brand-gold/90"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Manaus – AM</div>
+                            </li>
+                        </ul>
+                        <h3 class="pt-4 text-white font-serif font-bold uppercase tracking-widest text-sm animate-on-scroll visible-fade-up" data-animation="fade-up">Escritório RS</h3>
+                        <ul class="space-y-4">
+                            <li><a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." class="flex items-center gap-3 text-white/70 hover:text-brand-gold transition-colors text-sm group animate-on-scroll visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-4 h-4 text-brand-gold/90"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>(54) 99904-6458</a></li>
+                            
+                                <div class="flex items-center gap-3 text-white/70 text-sm group animate-on-scroll stagger-2 visible-fade-up" data-animation="fade-up"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 text-brand-gold/90"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Rio Grande do Sul</div>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center">
+                <p class="text-white/50 text-[10px] md:text-xs tracking-widest font-medium animate-on-scroll visible-fade-up" data-animation="fade-up">© 2026 Willyan Souza Brito – Assessoria e Consultoria Jurídica. Todos os
+                    direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE (MOBILE) -->
+    <div class="fixed bottom-0 left-0 right-0 z-[60] p-4 md:hidden">
+        <a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." class="bg-brand-gold text-black w-full py-4 rounded-xl font-black text-base flex items-center justify-center gap-3 shadow-[0_-5px_30px_rgba(234,179,8,0.3)] active:scale-95 transition-transform uppercase animate-on-scroll" data-animation="fade-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            Limpar meu nome agora
+        </a>
+    </div>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE (DESKTOP) -->
+    <a href="https://wa.me/5592984899955?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20jur%C3%ADdicos." target="_blank" rel="noopener noreferrer" class="hidden md:flex fixed bottom-8 right-8 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform items-center justify-center group animate-on-scroll visible-scale" data-animation="scale">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-8 h-8"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 
+
+    <!-- SCRIPTS -->
+
+    <!-- Lucide Icons: Biblioteca de ícones leve e moderna -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Inicializa todos os ícones da página
+        lucide.createIcons();
+    </script>
+
+    <!-- SCRIPT DE ANIMAÇÃO DO NÚMERO 780 -->
+    <!-- SCRIPT DE ANIMAÇÃO DO NÚMERO 780 COM BARRA CRESCENDO LINEARMENTE -->
+    <script>
+        // Animação de contagem do número 780 com mudança de cores e barra crescendo
+        function animateCounter(element, start, end, duration) {
+            let startTime = null;
+
+            const animation = (currentTime) => {
+                if (startTime === null) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                const value = Math.floor(start + (end - start) * progress);
+                element.textContent = value;
+
+                // Muda a cor conforme o progresso
+                let color;
+                if (progress < 0.25) {
+                    // 0-25%: Vermelho para Laranja
+                    const localProgress = progress / 0.25;
+                    const r = 255;
+                    const g = Math.floor(165 * localProgress);
+                    const b = 0;
+                    color = `rgb(${r}, ${g}, ${b})`;
+                } else if (progress < 0.5) {
+                    // 25-50%: Laranja para Amarelo
+                    const localProgress = (progress - 0.25) / 0.25;
+                    const r = 255;
+                    const g = Math.floor(165 + (255 - 165) * localProgress);
+                    const b = 0;
+                    color = `rgb(${r}, ${g}, ${b})`;
+                } else if (progress < 0.75) {
+                    // 50-75%: Amarelo para Amarelo-Verde
+                    const localProgress = (progress - 0.5) / 0.25;
+                    const r = Math.floor(255 - (255 - 173) * localProgress);
+                    const g = 255;
+                    const b = 0;
+                    color = `rgb(${r}, ${g}, ${b})`;
+                } else {
+                    // 75-100%: Amarelo-Verde para Verde
+                    const localProgress = (progress - 0.75) / 0.25;
+                    const r = Math.floor(173 - (173 - 34) * localProgress);
+                    const g = 255;
+                    const b = Math.floor(94 * localProgress);
+                    color = `rgb(${r}, ${g}, ${b})`;
+                }
+
+                // Aplica a cor no número
+                element.style.color = color;
+
+                // Aplica a cor e o crescimento na barra de progresso
+                const progressBar = document.querySelector('.progress-bar');
+                if (progressBar) {
+                    // Calcula a largura baseada no progresso (começa em 0%, vai até 85%)
+                    const barWidth = progress * 85;
+                    progressBar.style.width = barWidth + '%';
+                    progressBar.style.backgroundColor = color;
+                    progressBar.style.boxShadow = `0 0 15px ${color}`;
+                    // Remove transition para animação suave
+                    progressBar.style.transition = 'none';
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                }
+            };
+
+            requestAnimationFrame(animation);
+        }
+
+        // Intersection Observer para disparar animação ao scroll
+        const observerScore = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+
+                    // Reset da barra (começa em 0%)
+                    const progressBar = document.querySelector('.progress-bar');
+                    if (progressBar) {
+                        progressBar.style.width = '0%';
+                    }
+
+                    // Adiciona classe de animação
+                    element.classList.add('animated');
+
+                    // Inicia contagem de 300 a 780 em 2.5 segundos
+                    animateCounter(element, 300, 780, 2500);
+
+                    // Desconecta observer para não repetir
+                    observerScore.unobserve(element);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observa o elemento
+        const scoreElement = document.getElementById('scoreNumber');
+        if (scoreElement) {
+            observerScore.observe(scoreElement);
+        }
+    </script>
+    <!-- SCRIPT DE ANIMAÇÕES AO SCROLL -->
+
+    <!-- SCRIPT 2: ANIMAÇÃO DO NÚMERO +360 PONTOS -->
+    <script>
+        function animatePointsCounter(element, start, end, duration) {
+            let startTime = null;
+
+            const animation = (currentTime) => {
+                if (startTime === null) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                const value = Math.floor(start + (end - start) * progress);
+                element.textContent = '+' + value + ' pontos';
+
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                }
+            };
+
+            requestAnimationFrame(animation);
+        }
+
+        const observerPoints = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    animatePointsCounter(element, 0, 360, 2500);
+                    observerPoints.unobserve(element);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const pointsElement = document.getElementById('pointsNumber');
+        if (pointsElement) {
+            observerPoints.observe(pointsElement);
+        }
+    </script>
+    <script>
+
+        // Intersection Observer para disparar animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const animationType = entry.target.dataset.animation;
+                    entry.target.classList.add('visible-' + animationType);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observa todos os elementos com classe animate-on-scroll
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+
+
+
+</body></html>
