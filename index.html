@@ -339,9 +339,8 @@
 
             </div>
         </div>
-
-        <div class="absolute bottom-0 right-0 lg:right-auto lg:left-1/2 lg:-translate-x-1/2 z-[120] pointer-events-none w-full max-w-full flex justify-end lg:justify-start items-end lg:pl-[28rem] xl:pl-[36rem] pt-16 overflow-hidden">
-            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" alt="Especialista Willyan Souza Brito" class="h-auto w-auto max-w-[90%] md:max-w-[70%] lg:max-w-none max-h-[70vh] md:max-h-[80vh] lg:max-h-[90vh] object-contain block pointer-events-auto entrada-especialista" style="animation-name: slideInFromRight;">
+        <div class="absolute bottom-0 right-0 lg:right-0 lg:left-auto z-10 pointer-events-none w-full max-w-full flex justify-end items-end pt-16 lg:pr-10 xl:pr-20">
+            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" alt="Especialista Willyan Souza Brito" class="h-auto w-auto max-w-[90%] md:max-w-[70%] lg:max-w-[800px] max-h-[70vh] md:max-h-[80vh] lg:max-h-[85vh] object-contain block pointer-events-auto entrada-especialista" style="animation-name: slideInFromRight;">
         </div>
     </section>
 
@@ -987,22 +986,26 @@
     </script>
     <script>
 
-        // Intersection Observer para disparar animações ao scroll
+        // Intersection Observer para disparar animações ao scroll continuamente
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
+                const animationType = entry.target.dataset.animation;
+                
                 if (entry.isIntersecting) {
-                    const animationType = entry.target.dataset.animation;
+                    // Adiciona a animação quando entra na tela
                     entry.target.classList.add('visible-' + animationType);
-                    observer.unobserve(entry.target);
+                } else {
+                    // Remove a animação quando sai da tela (para repetir depois)
+                    entry.target.classList.remove('visible-' + animationType);
                 }
             });
         }, observerOptions);
-
+        
         // Observa todos os elementos com classe animate-on-scroll
         document.querySelectorAll('.animate-on-scroll').forEach((el) => {
             observer.observe(el);
