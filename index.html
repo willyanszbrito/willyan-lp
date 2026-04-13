@@ -229,6 +229,7 @@
             animation-delay: 0.6s;
         }
         /* --- NOVA ANIMAÇÃO DE ENTRADA PELA DIREITA --- */
+        /* --- ANIMAÇÃO SEM CORTE NA CABEÇA --- */
         @keyframes slideInFromRight {
             0% {
                 transform: translateX(100%);
@@ -284,59 +285,52 @@
     </button>
     
     <!-- SEÇÃO HOME (MAIN HERO) -->
-    <section class="relative bg-white dark:bg-black transition-colors min-h-[85vh] flex items-center overflow-visible"> 
+    <section class="relative bg-white dark:bg-black transition-colors min-h-[600px] lg:min-h-[750px] flex items-center overflow-visible"> 
         
         <div class="absolute inset-0 z-0 opacity-10 dark:opacity-60 invert dark:invert-0 mix-blend-multiply dark:mix-blend-normal pointer-events-none">
             <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/bg.png" alt="Background" class="w-full h-full object-cover">
         </div>
 
-        <div class="absolute bottom-0 right-[-10%] md:right-0 lg:left-1/2 lg:-translate-x-[-20%] z-10 pointer-events-none w-full max-w-full flex justify-end items-end lg:pr-10 opacity-50 lg:opacity-100">
-            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" alt="Especialista Willyan Souza Brito" class="h-auto w-auto max-w-[75%] md:max-w-[70%] lg:max-w-[850px] max-h-[55vh] md:max-h-[75vh] lg:max-h-[82vh] object-contain block pointer-events-auto entrada-especialista" style="animation-name: slideInFromRight;">
+        <div class="absolute bottom-0 right-0 z-10 pointer-events-none w-full max-w-full flex justify-end items-end opacity-50 lg:opacity-100">
+            <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/men.png" 
+                 alt="Especialista Willyan Souza Brito" 
+                 class="h-auto w-auto max-w-[80%] md:max-w-[70%] lg:max-w-[800px] max-h-[50vh] lg:max-h-[85vh] object-contain block pointer-events-auto entrada-especialista" 
+                 style="animation-name: slideInFromRight;">
         </div>
 
-        <div class="container mx-auto px-6 lg:px-20 xl:px-32 relative z-20 pt-32 pb-16 lg:py-24">
+        <div class="container mx-auto px-6 lg:px-20 xl:px-32 relative z-20 pt-20 lg:pt-0">
             <div class="grid lg:grid-cols-2 gap-8 items-center">
-                <div class="space-y-8 max-w-2xl">
+                <div class="space-y-8">
                     <div class="space-y-4">
                         <h1 class="text-3xl md:text-5xl font-semibold leading-tight animate-on-scroll visible-fade-left" data-animation="fade-left">
                             <span class="text-gray-900 dark:text-white">Limpeza de Nome Completa</span>
                             <span class="text-brand-gold"> e Liberação de Crédito</span>
                         </h1>
-                        <p class="text-gray-700 dark:text-white/70 text-lg lg:text-xl leading-relaxed animate-on-scroll stagger-1 visible-fade-up" data-animation="fade-up">
+                        <p class="text-gray-700 dark:text-white/70 text-lg lg:text-xl max-w-2xl leading-relaxed animate-on-scroll visible-fade-up" data-animation="fade-up">
                             Regularizamos seu nome no SPC, Serasa, Boa Vista e Bacen com estratégia jurídica segura e acompanhamento completo.
                         </p>
                     </div>
 
-                    <div class="flex items-end gap-2 lg:block">
-                        <ul class="space-y-3 flex-1">
-                            <li class="flex items-center gap-2 animate-on-scroll stagger-1 visible-fade-left" data-animation="fade-left">
-                                <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Aumento do Score</span>
-                            </li>
-                            <li class="flex items-center gap-2 animate-on-scroll stagger-2 visible-fade-left" data-animation="fade-left">
-                                <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Limpa Bacen</span>
-                            </li>
-                            <li class="flex items-center gap-2 animate-on-scroll stagger-3 visible-fade-left" data-animation="fade-left">
-                                <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Rating Comercial</span>
-                            </li>
-                            <li class="flex items-center gap-2 animate-on-scroll stagger-4 visible-fade-left" data-animation="fade-left">
-                                <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                                </div>
-                                <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Crédito Liberado</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 animate-on-scroll stagger-1 visible-fade-left" data-animation="fade-left">
+                            <div class="bg-brand-gold/10 p-1 rounded-md shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+                            <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Aumento do Score</span>
+                        </li>
+                        <li class="flex items-center gap-2 animate-on-scroll stagger-2 visible-fade-left" data-animation="fade-left">
+                            <div class="bg-brand-gold/10 p-1 rounded-md shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+                            <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Limpa Bacen</span>
+                        </li>
+                        <li class="flex items-center gap-2 animate-on-scroll stagger-3 visible-fade-left" data-animation="fade-left">
+                            <div class="bg-brand-gold/10 p-1 rounded-md shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+                            <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Rating Comercial</span>
+                        </li>
+                        <li class="flex items-center gap-2 animate-on-scroll stagger-4 visible-fade-left" data-animation="fade-left">
+                            <div class="bg-brand-gold/10 p-1 rounded-md shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
+                            <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Crédito Liberado</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="hidden lg:block"></div>
+                <div class="hidden lg:block h-20"></div>
             </div>
         </div>
     </section>
