@@ -218,7 +218,7 @@
 <body class="min-h-screen selection:bg-brand-gold/30 pb-20 md:pb-0">
 
     <!-- MENU SUPERIOR (NAVBAR) -->
-    <nav class="bg-brand-dark-bg/95 backdrop-blur-md border-b border-white/5 py-4 top-0 z-[100] hidden lg:block transition-colors">
+    <nav class="fixed w-full bg-brand-dark-bg/95 backdrop-blur-md border-b border-gray-800 py-4 top-0 z-[100] hidden lg:block transition-colors">
         <div class="container mx-auto px-6 lg:px-20 xl:px-32 flex items-center justify-between">
             <img src="./Alex Souza Cabral – Assessoria e Consultoria Jurídica_files/LOGO-AC-8.png" alt="Logo" class="h-20 w-auto object-contain animate-on-scroll visible-fade-up" data-animation="fade-up">
             
@@ -228,6 +228,11 @@
             </button>
         </div>
     </nav>
+
+    <button id="theme-toggle-mobile" class="fixed top-4 right-4 z-[100] p-2 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-brand-gold shadow-lg lg:hidden transition-all">
+        <svg id="theme-toggle-dark-icon-mobile" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="theme-toggle-light-icon-mobile" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
     
     <!-- SEÇÃO HOME (MAIN HERO) -->
     <section class="relative bg-white dark:bg-black overflow-hidden transition-colors">
@@ -257,29 +262,25 @@
                                     <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                                     </div>
-                                    <span class="text-sm md:text-lg font-bold <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide"> uppercase tracking-wide">Aumento
-                                        do Score</span>
+                                    <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Aumento do Score</span>
                                 </li>
                                 <li class="flex items-center gap-2 animate-on-scroll stagger-2 visible-fade-left" data-animation="fade-left">
                                     <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                                     </div>
-                                    <span class="text-sm md:text-lg font-bold <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide"> uppercase tracking-wide">Limpa
-                                        Bacen</span>
+                                    <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Limpa Bacen</span>
                                 </li>
                                 <li class="flex items-center gap-2 animate-on-scroll stagger-3 visible-fade-left" data-animation="fade-left">
                                     <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                                     </div>
-                                    <span class="text-sm md:text-lg font-bold <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide"> uppercase tracking-wide">Rating
-                                        Comercial</span>
+                                    <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Rating Comercial</span>
                                 </li>
                                 <li class="flex items-center gap-2 animate-on-scroll stagger-4 visible-fade-left" data-animation="fade-left">
                                     <div class="bg-brand-gold/10 p-1 rounded-md shrink-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-gold w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
                                     </div>
-                                    <span class="text-sm md:text-lg font-bold <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide"> uppercase tracking-wide">Crédito
-                                        Liberado</span>
+                                    <span class="text-sm md:text-lg font-bold text-gray-900 dark:text-white/90 uppercase tracking-wide">Crédito Liberado</span>
                                 </li>
                             </ul>
 
@@ -959,43 +960,61 @@
             observer.observe(el);
         });
     </script>
-    <script>
+<script>
+        // Elementos do botão Desktop
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-        // Verifica a preferência salva ou o padrão do sistema
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            themeToggleLightIcon.classList.remove('hidden');
-            document.documentElement.classList.add('dark');
-        } else {
-            themeToggleDarkIcon.classList.remove('hidden');
-            document.documentElement.classList.remove('dark'); // Garante que comece no light se não houver preferência
-        }
-
         var themeToggleBtn = document.getElementById('theme-toggle');
 
-        themeToggleBtn.addEventListener('click', function() {
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
+        // Elementos do botão Mobile
+        var themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+        var themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+        var themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
 
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
+        // Função para aplicar os ícones corretos com base no tema atual
+        function updateIcons(isDark) {
+            if (isDark) {
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+                if(themeToggleLightIconMobile) themeToggleLightIconMobile.classList.remove('hidden');
+                if(themeToggleDarkIconMobile) themeToggleDarkIconMobile.classList.add('hidden');
             } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+                if(themeToggleDarkIconMobile) themeToggleDarkIconMobile.classList.remove('hidden');
+                if(themeToggleLightIconMobile) themeToggleLightIconMobile.classList.add('hidden');
             }
-        });
+        }
+
+        // Verifica a preferência salva ou o padrão do sistema ao carregar
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            updateIcons(true);
+        } else {
+            document.documentElement.classList.remove('dark');
+            updateIcons(false);
+        }
+
+        // Função de troca de tema
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                updateIcons(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                updateIcons(true);
+            }
+        }
+
+        // Atribui o evento de clique aos dois botões
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        }
+        if (themeToggleBtnMobile) {
+            themeToggleBtnMobile.addEventListener('click', toggleTheme);
+        }
     </script>    
 </body>
 </html>
